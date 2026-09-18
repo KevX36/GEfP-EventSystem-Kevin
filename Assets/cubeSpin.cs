@@ -19,7 +19,7 @@ public class cubeSpin : MonoBehaviour
     }
 
     public bool spin = false;
-    public void changeSpin()
+    public void ToggleSpin()
     {
         if (spin)
         {

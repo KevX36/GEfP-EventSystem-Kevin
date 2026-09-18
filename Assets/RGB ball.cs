@@ -17,8 +17,9 @@ public class RGBball : MonoBehaviour
     }
     public bool rave = false;
     public Animation ani;
-    public void toggleRave()
+    public void ToggleRave()
     {
+        Debug.Log("ball is raving");
         if( rave )
         {
             rave = false;
