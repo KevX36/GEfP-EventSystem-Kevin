@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
     public void JumpAction(InputAction.CallbackContext context)
     {
         Debug.Log("jumped");
-        text.text = "pretend this jumped so I don't have to program anything else, regardless you can toggle the other stuff by \"jumping\" again";
+        text.text = "pretend this jumped so I don't have to program anything else, also you can toggle the other stuff by \"jumping\" again";
 
         jumping.Invoke();
 
