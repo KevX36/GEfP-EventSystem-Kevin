@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 137}
+  m_AnchoredPosition: {x: 17, y: 104}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344000188
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -220.04132, y: 0, z: -190.97949, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -529,6 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420010192}
+  - component: {fileID: 420010194}
   - component: {fileID: 420010191}
   - component: {fileID: 420010190}
   - component: {fileID: 420010189}
@@ -655,6 +656,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &420010194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420010188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b85a229ca81bd244acf7f5d1f78426c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RGBball
+  rave: 0
+  ani: {fileID: 420010193}
 --- !u!1 &825196388
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1006144811}
+  - component: {fileID: 1006144812}
   - component: {fileID: 1006144810}
   - component: {fileID: 1006144809}
   - component: {fileID: 1006144808}
@@ -997,6 +1013,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006144812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006144807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55359634ebce084c8b5ba1ce6145504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::cubeSpin
+  spin: 0
 --- !u!1 &1859613097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1071,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c707cd1e5caab30429b509c281d529e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
+  jumping:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 420010194}
+        m_TargetAssemblyTypeName: RGBball, Assembly-CSharp
+        m_MethodName: ToggleRave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1006144812}
+        m_TargetAssemblyTypeName: cubeSpin, Assembly-CSharp
+        m_MethodName: ToggleSpin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   text: {fileID: 344000188}
 --- !u!114 &1859613102
 MonoBehaviour:
@@ -1072,7 +1128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1859613101}
         m_TargetAssemblyTypeName: Jump, Assembly-CSharp
-        m_MethodName: Jumping
+        m_MethodName: JumpAction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

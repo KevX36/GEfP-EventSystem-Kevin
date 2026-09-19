@@ -16,19 +16,19 @@ public class RGBball : MonoBehaviour
 
     }
     public bool rave = false;
-    public Animation ani;
+    public Animator ani;
     public void ToggleRave()
     {
         Debug.Log("ball is raving");
         if( rave )
         {
             rave = false;
-            ani.Stop();
+            ani.SetBool("raving", rave);
         }
         else
         {
             rave = true;
-            ani.Play();
+            ani.SetBool("raving", rave);
         }
     }
 }
